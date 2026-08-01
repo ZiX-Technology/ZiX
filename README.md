@@ -1,1 +1,1 @@
-# ZiX
+# ZiX-Technology
