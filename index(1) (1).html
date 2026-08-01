@@ -1,0 +1,17 @@
+<!DOCTYPE html><html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>ZiX Technology</title><style>
+html,body{margin:0;height:100%;background:#05070d;color:#fff;font-family:Arial;overflow:hidden}
+#bg{position:fixed;inset:0;background:radial-gradient(circle at 20% 20%,#123,#000 60%);animation:p 8s infinite alternate}
+@keyframes p{to{filter:hue-rotate(90deg)}}
+#load,#app{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column}
+.card{background:rgba(255,255,255,.08);backdrop-filter:blur(12px);padding:30px;border-radius:18px;box-shadow:0 0 30px #0ff4}
+input,button{padding:12px;margin:8px;border-radius:8px;border:none}
+button{background:#0ff}
+#app{display:none}
+h1{text-shadow:0 0 12px #0ff}
+</style></head><body><div id='bg'></div>
+<div id='load'><h1>ZiX Technology</h1><p>Initializing secure environment...</p><p id='t'>30</p></div>
+<div id='app'><div class='card'><h1>ZiX Technology</h1><input id='k' type='password' placeholder='Enter passkey'><button onclick='go()'>Access</button><div id='m'></div></div></div>
+<script>
+let s=30,t=document.getElementById('t');let i=setInterval(()=>{s--;t.textContent=s;if(s<=0){clearInterval(i);load.style.display='none';app.style.display='flex';}},1000);
+function go(){let m=document.getElementById('m');if(k.value==='ZiX2026'){m.style.color='#6f6';m.textContent='✓ Access Granted';}else{m.style.color='#f66';m.textContent='✗ Incorrect Passkey';}}
+</script></body></html>
